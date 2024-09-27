@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ]; then
+    echo "No specified bucket name"
+    exit -1
+fi
+
+echo "==Delete Bucket Script=="
+
+
+echo "Deleting Bucket --> $1" 
+aws s3api delete-bucket \
+--bucket $1 \
+
+./s3/bash_scripts/list-buckets

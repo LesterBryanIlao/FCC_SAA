@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+echo "==Deploy S3 Bucket via CFN(yaml)=="
+
+
+if [ -z "$1" ]; then
+    echo "No specified yaml file"
+    exit -1
+fi
+
+STACK_NAME="cfn-s3-simple-ilale"
+
+aws cloudformation deploy \
+--template-file $1 \
+--stack-name $STACK_NAME

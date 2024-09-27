@@ -1,0 +1,7 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: A sample CloudFormation template with YAML comments to create S3 bucket.
+Resources:
+  S3Bucket: # logical name, can be renamed
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: yaml-cfn-bucket-ilalede

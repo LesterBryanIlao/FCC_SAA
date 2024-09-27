@@ -1,0 +1,4 @@
+Install AWS Tools via Powershell
+
+1. Install-Module -Name AWS.Tools.Installer
+2. Install-AWSToolsModule AWS.Tools.EC2,AWS.Tools.S3 -CleanUp

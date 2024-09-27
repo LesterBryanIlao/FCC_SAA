@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ]; then
+    echo "No specified bucket name."
+    exit -1
+fi
+
+
+if [ -z "$2" ]; then
+    echo "No specified object key."
+    exit -1
+fi
+
+BUCKET_NAME=$1
+OBJECT_KEY=$2
+
+
+aws s3api delete-object \
+--bucket $BUCKET_NAME \
+--key $OBJECT_KEY \
+
+echo "Object $OBJECT_KEY is successfully deleted from $BUCKET_NAME."

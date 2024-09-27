@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ]; then
+    echo "No specified bucket name"
+    exit -1
+fi
+
+echo "==Delete Bucket Recursively Script=="
+
+S3_BUCKET="s3://$1"
+
+echo "Deleting Bucket --> $S3_BUCKET" 
+aws s3 rm $S3_BUCKET --recursive
+aws s3 rb $S3_BUCKET 
+
+./s3/bash_scripts/list-buckets

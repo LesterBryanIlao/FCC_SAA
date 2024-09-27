@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+
+if [ -z "$1" ]; then
+    echo "No specified bucket name"
+    exit -1
+fi
+
+echo "==Create Bucket Script=="
+
+echo "Creating Bucket --> $1" 
+aws s3api create-bucket \
+--bucket $1 \
+--query Location \
+--output text
+
