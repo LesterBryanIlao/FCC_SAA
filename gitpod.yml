@@ -1,8 +1,22 @@
 tasks:
-  - name: setup
-    init: |
-      source ./bin/aws_cdk_install.sh
-      source ./bin/terraform_install.sh
-      source ./bin/utils_install.sh
-      source ./bin/powershell.sh
-      source ./bin/aws_cli_install.sh
+  - name: cdk
+    before: |
+      ./bin/aws_cdk_install.sh
+      
+  - name: terraform
+    before: |
+      ./bin/terraform_install.sh
+
+  - name: utils
+    before: |
+      ./bin/utils_install.sh
+
+  - name: powershell
+    before: |
+      ./bin/powershell_install.sh
+
+  - name: aws-cli
+    env: 
+      AWS_CLI_AUTO_PROMPT: on-partial
+    before: |
+      ./bin/aws_cli_install.sh
