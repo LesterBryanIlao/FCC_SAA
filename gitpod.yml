@@ -1,8 +1,8 @@
 tasks:
   - name: setup
     init: |
-      ./bin/aws_cdk_install.sh
-      ./bin/terraform_install.sh
-      ./bin/utils_install.sh
-      ./bin/powershell.sh
-      ./bin/aws_cli_install.sh
+      source ./bin/aws_cdk_install.sh
+      source ./bin/terraform_install.sh
+      source ./bin/utils_install.sh
+      source ./bin/powershell.sh
+      source ./bin/aws_cli_install.sh
