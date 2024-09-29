@@ -1,0 +1,4 @@
+Bucket: ilale-checksums-bucket
+File: checksum-file.txt
+md5sum: 1aaa28745328b15044bd0ea7ff800cfa
+etag: 1aaa28745328b15044bd0ea7ff800cfa
