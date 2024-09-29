@@ -2,3 +2,18 @@ Bucket: ilale-checksums-bucket
 File: checksum-file.txt
 md5sum: 1aaa28745328b15044bd0ea7ff800cfa
 etag: 1aaa28745328b15044bd0ea7ff800cfa
+
+checksum process:
+1. sudo apt-get install rhash -y
+2. rhash --crc32 --simple ./checksum-file.txt
+
+put-object with checksum
+--checkcum-algorithm="CRC32"
+--checksum-crc32="92b3d606"
+
+cli command:
+aws s3api put-object \
+--bucket="ilale-checksums-bucket" \
+--key="checksum-file-crc32.txt" \
+--body="checksum-file.txt" \
+--checksum-algorithm="CRC32"
