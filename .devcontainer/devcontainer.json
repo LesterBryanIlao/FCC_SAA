@@ -1,0 +1,19 @@
+{
+    "name": "My Codespace",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "postCreateCommand": "./bin/aws_cdk_install.sh && ./bin/terraform_install.sh && ./bin/utils_install.sh && ./bin/powershell_install.sh && ./bin/aws_cli_install.sh",
+    "customizations": {
+        "vscode": {
+            "settings": {},
+            "extensions": []
+        }
+    },
+    "features": {},
+    "forwardPorts": [],
+    "remoteUser": "vscode",
+    "containerEnv": {
+        "AWS_CLI_AUTO_PROMPT": "on-partial"
+    }
+}
