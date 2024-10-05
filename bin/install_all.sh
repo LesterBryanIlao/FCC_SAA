@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+sudo apt update
 # cdk
 ./bin/aws_cdk_install.sh
 
